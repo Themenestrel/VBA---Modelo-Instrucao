@@ -1,0 +1,172 @@
+Public Sub Propostas_Encaminhamento_Sem_Tabela()
+
+Set DOC = Word.Documents.Application.ActiveDocument
+'("C:\Users\it131\OneDrive\Área de Trabalho\Desenvolvimento - 2ª Versão\Anexo IX - Contrato decorrente de ARP\Modelo_Anexo IX_Contrato decorrente de ARP.docx")
+With DOC
+       
+'       Bloco Proposições
+       
+        If Sheets("prop.encaminhamento").Range("C12") <> "" Then
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROP1"
+            .Application.Selection.Find.Execute
+            .Application.Selection.Range = Sheets("prop.encaminhamento").Range("C12")
+        Else
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROP1."
+            .Application.Selection.Find.Execute
+            .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+        End If
+       
+        If Sheets("prop.encaminhamento").Range("D12") <> "" Then
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROPTEXTO1"
+            .Application.Selection.Find.Execute
+            .Application.Selection.Range = Sheets("prop.encaminhamento").Range("D12")
+        Else
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROPTEXTO1"
+            .Application.Selection.Find.Execute
+            .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+        End If
+                
+        If Sheets("prop.encaminhamento").Range("C14") <> "" Then
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROP2"
+            .Application.Selection.Find.Execute
+            .Application.Selection.Range = Sheets("prop.encaminhamento").Range("C14")
+        Else
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROP2."
+            .Application.Selection.Find.Execute
+            .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+        End If
+        
+        If Sheets("prop.encaminhamento").Range("D14") <> "" Then
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROPTEXTO2"
+            .Application.Selection.Find.Execute
+            .Application.Selection.Range = Sheets("prop.encaminhamento").Range("D14")
+        Else
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROPTEXTO2"
+            .Application.Selection.Find.Execute
+            .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+        End If
+        
+        
+        If Sheets("prop.encaminhamento").Range("C16") <> "" Then
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROP3"
+            .Application.Selection.Find.Execute
+            .Application.Selection.Range = Sheets("prop.encaminhamento").Range("C16")
+        Else
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROP3."
+            .Application.Selection.Find.Execute
+            .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+        End If
+        
+        If Sheets("prop.encaminhamento").Range("D16") <> "" Then
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROPTEXTO3"
+            .Application.Selection.Find.Execute
+            .Application.Selection.Range = Sheets("prop.encaminhamento").Range("D16")
+        Else
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROPTEXTO3"
+            .Application.Selection.Find.Execute
+            .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+        End If
+        
+        
+        If Sheets("prop.encaminhamento").Range("C18") <> "" Then
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROP4"
+            .Application.Selection.Find.Execute
+            .Application.Selection.Range = Sheets("prop.encaminhamento").Range("C18")
+        Else
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROP4."
+            .Application.Selection.Find.Execute
+            .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+        End If
+        
+        If Sheets("prop.encaminhamento").Range("D18") <> "" Then
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROPTEXTO4"
+            .Application.Selection.Find.Execute
+            .Application.Selection.Range = Sheets("prop.encaminhamento").Range("D18")
+        Else
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROPTEXTO4"
+            .Application.Selection.Find.Execute
+            .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+        End If
+        
+        
+        If Sheets("prop.encaminhamento").Range("C20") <> "" Then
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROP5"
+            .Application.Selection.Find.Execute
+            .Application.Selection.Range = Sheets("prop.encaminhamento").Range("C20")
+        Else
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROP5."
+            .Application.Selection.Find.Execute
+            .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+        End If
+       
+        If Sheets("prop.encaminhamento").Range("D20") <> "" Then
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROPTEXTO5"
+            .Application.Selection.Find.Execute
+            .Application.Selection.Range = Sheets("prop.encaminhamento").Range("D20")
+        Else
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROPTEXTO5"
+            .Application.Selection.Find.Execute
+            .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+        End If
+        
+        If Sheets("prop.encaminhamento").Range("C22") <> "" Then
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROP6"
+            .Application.Selection.Find.Execute
+            .Application.Selection.Range = Sheets("prop.encaminhamento").Range("C22")
+        Else
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROP6."
+            .Application.Selection.Find.Execute
+            .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+        End If
+       
+        If Sheets("prop.encaminhamento").Range("D22") <> "" Then
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROPTEXTO6"
+            .Application.Selection.Find.Execute
+            .Application.Selection.Range = Sheets("prop.encaminhamento").Range("D22")
+        Else
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROPTEXTO6"
+            .Application.Selection.Find.Execute
+            .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+        End If
+        
+        If Sheets("prop.encaminhamento").Range("C25") <> "Não" Then
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROPTEXTO7"
+            .Application.Selection.Find.Execute
+            .Application.Selection.Range = Sheets("prop.encaminhamento").Range("D25")
+        Else
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            .Application.Selection.Find.Text = "#PROPTEXTO7"
+            .Application.Selection.Find.Execute
+            .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+        End If
+       
+               
+    
+End With
+
+End Sub
