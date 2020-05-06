@@ -1,0 +1,122 @@
+Public Word As Word.Application
+Public DOC As Word.Document
+Public Linha As Integer
+Public Num As Integer
+Public Sigla As String
+Public Nome_arquivo As String
+Public dlgSaveAs As FileDialog
+Public valor As Variant
+Public Codigos As Variant
+Dim Copia_Codigos(0 To 37) As Variant
+Public j As Integer
+Public Nome_arquivo_salvo As String
+Public tabela As Integer
+
+Public Sub Rodar_Total()
+
+Linha = 18
+i = 0
+j = 0
+tabela = 5
+
+Codigos = Array("#ANOINSTRUMENTO", "#NINSTRUMENTO", "#ESPECIE", "#CODFAVORECIDO", "#FAVORECIDOC", "#PROCADM", "#INICIOVIGENCIA", "#FINALVIGENCIA", "#NPROGTRABALHO", "#NFONTERECURSOS", _
+"#DESCRFONTERECURSOS", "#OBJETOC", "#MODLICITACAO", "#FUNDLEGAL", "#VALORC", "#DATAASSINATURA", "#NORGAOEXECUTOR", "#DESCRORGAOEXECUTOR", "#NUNIDORCAMENTARIA", "#DESCRUNIDORCAMENTARIA", _
+"#NPROGRAMA", "#DESCRPROGRAMA", "#NNATDESPESA", "#DESCRNATDESPESA", "#NARP", "#ANOARP", "#OBJETOARP", "#LICPROCADM", "#ORGAOGESTORARP", "#ORGAOGESTORNOMEARP", "#FAVORECIDOARP", "#ORGAOSPARTICIPANTESARP", "#ARPINICIOVIGENCIA", "#ARPFINALVIGENCIA", "#VALORARP", "#NLICITACAO")
+
+While j <= 35
+
+    If Linha = 42 Then
+        Linha = Linha + 5
+        Copia_Codigos(j) = Sheets("dados.cadastrais").Range("D" & Linha)
+        j = j + 1
+        Linha = Linha + 1
+    Else
+        Copia_Codigos(j) = Sheets("dados.cadastrais").Range("D" & Linha)
+        Linha = Linha + 1
+        j = j + 1
+    End If
+    
+Wend
+
+
+Set Word = CreateObject("WORD.Application")
+Set DOC = Word.Documents.Open("C:\Users\it131\OneDrive\Área de Trabalho\Desenvolvimento - 2ª Versão\Anexo IX - Contrato decorrente de ARP\Modelo_Anexo IX_Contrato decorrente de ARP.docx")
+Word.Visible = True
+
+With DOC
+
+    Set dlgSaveAs = .Application.FileDialog(FileDialogType:=msoFileDialogSaveAs)
+    dlgSaveAs.Show
+    dlgSaveAs.Execute
+    Nome_arquivo = ActiveDocument.Name
+    
+    .ActiveWindow.ActivePane.View.SeekView = wdSeekCurrentPageHeader
+    .Application.Selection.Find.Text = "#PROCESSOTCMRJ"
+    .Application.Selection.Find.Execute
+    .Application.Selection.Range = Sheets("dados.cadastrais").Range("D9")
+    
+    .Application.Selection.Find.Text = "#NUM"
+    .Application.Selection.Find.Execute
+    .Application.Selection.Range = Sheets("dados.cadastrais").Range("D64")
+    
+    .Application.Selection.Find.Text = "#DATAAUTUACAO"
+    .Application.Selection.Find.Execute
+    .Application.Selection.Range = Sheets("dados.cadastrais").Range("D10")
+    
+    .Application.Selection.Find.Text = "#NUM"
+    .Application.Selection.Find.Execute
+    .Application.Selection.Range = Sheets("dados.cadastrais").Range("D64")
+    
+
+    
+    While i <= 35
+           
+        .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+        .Application.Selection.Find.Text = Codigos(i)
+        Encontrou = .Application.Selection.Find.Execute
+        While Encontrou = True
+            
+            If Codigos(i) = "#CODFAVORECIDO" Then
+                .Application.Selection.Range = Format(Copia_Codigos(i), "00"".""000"".""000""/""0000-00")
+            Else
+            If Codigos(i) = "#PROCADM" Then
+                .Application.Selection.Range = Format(Copia_Codigos(i), "000""/""000"".""000""/""0000")
+            Else
+            If Codigos(i) = "#VALORC" Then
+                .Application.Selection.Range = Format(Copia_Codigos(i), "Currency")
+            Else
+            If Codigos(i) = "#VALORARP" Then
+                .Application.Selection.Range = Format(Copia_Codigos(i), "Currency")
+            Else
+                .Application.Selection.Range = Copia_Codigos(i)
+            End If
+            End If
+            End If
+            End If
+            
+        .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+        .Application.Selection.Find.Text = Codigos(i)
+        Encontrou = .Application.Selection.Find.Execute
+        
+            Wend
+                            
+        i = i + 1
+        
+    Wend
+    
+Call Dados_Revisor_Servidor
+
+Call Bloco_Questoes_Conclusao
+
+Call Propostas_Encaminhamento
+
+Call Propostas_Encaminhamento_Sem_Tabela
+
+    .Application.Quit
+    Set DOC = Nothing
+    Set Word = Nothing
+    MsgBox ("Finalizado")
+
+End With
+
+End Sub
