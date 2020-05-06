@@ -1,0 +1,859 @@
+Public Sub Propostas_Encaminhamento()
+
+tabela = 5
+
+Set DOC = Word.Documents.Application.ActiveDocument
+'("C:\Users\it131\OneDrive\Área de Trabalho\Desenvolvimento - 2ª Versão\Anexo IX - Contrato decorrente de ARP\Modelo_Anexo IX_Contrato decorrente de ARP.docx")
+With DOC
+
+'       Bloco Proposta de Encaminhamento 1
+        
+        If Sheets("prop.encaminhamento").Range("C12") = "Citação" Then
+                If Sheets("Citação").Range("E11") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTCIT1"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E13")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#CARGOCIT1"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E14")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#CPFCNPJCIT1"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E15")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#IRREGIDENTCIT1"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E16")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#CONDUTAIRREGCIT1"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E17")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DATAIRREGCIT1"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E18")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#CONDUTAESPCIT1"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E19")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#FUNDAMENTOJURIDICO1"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E20")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            If Sheets("prop.encaminhamento").Range("C12") = "Citação" Then
+                If Sheets("Citação").Range("E22") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTCIT2"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E24")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#CARGOCIT2"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E25")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#CPFCNPJCIT2"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E26")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#IRREGIDENTCIT2"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E27")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#CONDUTAIRREGCIT2"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E28")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DATAIRREGCIT2"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E29")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#CONDUTAESPCIT2"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E30")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#FUNDAMENTOJURIDICO2"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E31")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            If Sheets("prop.encaminhamento").Range("C12") = "Citação" Then
+                If Sheets("Citação").Range("E33") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTCIT3"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E35")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#CARGOCIT3"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E36")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#CPFCNPJCIT3"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E37")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#IRREGIDENTCIT3"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E38")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#CONDUTAIRREGCIT3"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E39")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DATAIRREGCIT3"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E40")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#CONDUTAESPCIT3"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E41")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#FUNDAMENTOJURIDICO3"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E42")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            
+            If Sheets("prop.encaminhamento").Range("C12") = "Citação" Then
+                If Sheets("Citação").Range("E44") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTCIT4"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E46")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#CARGOCIT4"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E47")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#CPFCNPJCIT4"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E48")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#IRREGIDENTCIT4"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E49")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#CONDUTAIRREGCIT4"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E50")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DATAIRREGCIT4"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E51")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#CONDUTAESPCIT4"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E52")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#FUNDAMENTOJURIDICO4"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E53")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            
+            If Sheets("prop.encaminhamento").Range("C12") = "Citação" Then
+                If Sheets("Citação").Range("E55") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTCIT5"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E46")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#CARGOCIT5"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E47")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#CPFCNPJCIT5"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E48")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#IRREGIDENTCIT5"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E49")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#CONDUTAIRREGCIT5"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E50")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DATAIRREGCIT5"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E51")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#CONDUTAESPCIT5"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E52")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#FUNDAMENTOJURIDICO5"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("Citação").Range("E53")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            
+'       Bloco Proposta de Encaminhamento 2
+        
+        If Sheets("prop.encaminhamento").Range("C14") = "Determinação" Then
+                If Sheets("determinaçao").Range("E11") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTDET1"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("determinaçao").Range("E13")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DETERMINACAO1"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("determinaçao").Range("E14")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#ACHADODET1"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("determinaçao").Range("E15")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#MOTIVACAODET1"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("determinaçao").Range("E16")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            If Sheets("prop.encaminhamento").Range("C14") = "Determinação" Then
+                If Sheets("determinaçao").Range("E18") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTDET2"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("determinaçao").Range("E20")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DETERMINACAO2"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("determinaçao").Range("E21")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#ACHADODET2"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("determinaçao").Range("E22")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#MOTIVACAODET2"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("determinaçao").Range("E23")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            
+            If Sheets("prop.encaminhamento").Range("C14") = "Determinação" Then
+                If Sheets("determinaçao").Range("E25") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTDET3"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("determinaçao").Range("E27")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DETERMINACAO3"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("determinaçao").Range("E28")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#ACHADODET3"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("determinaçao").Range("E29")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#MOTIVACAODET3"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("determinaçao").Range("E30")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            
+            If Sheets("prop.encaminhamento").Range("C14") = "Determinação" Then
+                If Sheets("determinaçao").Range("E32") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTDET4"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("determinaçao").Range("E34")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DETERMINACAO4"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("determinaçao").Range("E35")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#ACHADODET4"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("determinaçao").Range("E36")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#MOTIVACAODET4"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("determinaçao").Range("E37")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            If Sheets("prop.encaminhamento").Range("C14") = "Determinação" Then
+                If Sheets("determinaçao").Range("E39") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTDET5"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("determinaçao").Range("E41")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DETERMINACAO5"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("determinaçao").Range("E42")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#ACHADODET5"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("determinaçao").Range("E43")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#MOTIVACAODET5"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("determinaçao").Range("E44")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            
+                        
+'       Bloco Proposta de Encaminhamento 3
+        
+        If Sheets("prop.encaminhamento").Range("C16") = "Diligência" Then
+                If Sheets("diligencia").Range("E11") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTDILIG1"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E13")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DILIGENCIA1"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E14")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#MOTIVACAODILIG1"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E15")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            If Sheets("prop.encaminhamento").Range("C16") = "Diligência" Then
+                If Sheets("diligencia").Range("E17") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTDILIG2"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E19")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DILIGENCIA2"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E20")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#MOTIVACAODILIG2"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E21")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            
+            If Sheets("prop.encaminhamento").Range("C16") = "Diligência" Then
+                If Sheets("diligencia").Range("E23") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTDILIG3"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E25")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DILIGENCIA3"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E26")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#MOTIVACAODILIG3"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E27")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            
+            If Sheets("prop.encaminhamento").Range("C16") = "Diligência" Then
+                If Sheets("diligencia").Range("E29") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTDILIG4"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E31")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DILIGENCIA4"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E32")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#MOTIVACAODILIG4"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E33")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            
+            If Sheets("prop.encaminhamento").Range("C16") = "Diligência" Then
+                If Sheets("diligencia").Range("E35") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTDILIG5"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E37")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DILIGENCIA5"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E38")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#MOTIVACAODILIG5"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E39")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            
+            If Sheets("prop.encaminhamento").Range("C16") = "Diligência" Then
+                If Sheets("diligencia").Range("E41") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTDILIG6"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("43")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DILIGENCIA6"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E44")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#MOTIVACAODILIG6"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E45")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            
+            If Sheets("prop.encaminhamento").Range("C16") = "Diligência" Then
+                If Sheets("diligencia").Range("E47") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTDILIG7"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E49")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DILIGENCIA7"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E50")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#MOTIVACAODILIG7"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E51")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            
+            If Sheets("prop.encaminhamento").Range("C16") = "Diligência" Then
+                If Sheets("diligencia").Range("E53") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTDILIG8"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E55")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DILIGENCIA8"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E56")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#MOTIVACAODILIG8"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E57")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            
+            If Sheets("prop.encaminhamento").Range("C16") = "Diligência" Then
+                If Sheets("diligencia").Range("E59") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTDILIG9"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E61")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DILIGENCIA9"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E62")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#MOTIVACAODILIG9"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E63")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            
+            If Sheets("prop.encaminhamento").Range("C16") = "Diligência" Then
+                If Sheets("diligencia").Range("E65") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTDILIG10"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E67")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DILIGENCI10"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E68")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#MOTIVACAODILIG10"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("diligencia").Range("E69")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            
+'       Bloco Proposta de Encaminhamento 4
+        
+        If Sheets("prop.encaminhamento").Range("C18") = "Recomendação" Then
+                If Sheets("recomendacao").Range("E11") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTRECOM1"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("recomendacao").Range("E13")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#RECOMENDACAO1"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("recomendacao").Range("E14")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#ACHADORECOM1"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("recomendacao").Range("E15")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#MOTIVACAORECOM1"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("recomendacao").Range("E16")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            If Sheets("prop.encaminhamento").Range("C18") = "Recomendação" Then
+                If Sheets("recomendacao").Range("E18") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTRECOM2"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("recomendacao").Range("E20")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#RECOMENDACAO2"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("recomendacao").Range("E21")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#ACHADORECOM2"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("recomendacao").Range("E22")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#MOTIVACAORECOM2"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("recomendacao").Range("E23")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            If Sheets("prop.encaminhamento").Range("C18") = "Recomendação" Then
+                If Sheets("recomendacao").Range("E25") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTRECOM3"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("recomendacao").Range("E27")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#RECOMENDACAO3"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("recomendacao").Range("E28")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#ACHADORECOM3"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("recomendacao").Range("E29")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#MOTIVACAORECOM3"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("recomendacao").Range("E30")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            If Sheets("prop.encaminhamento").Range("C18") = "Recomendação" Then
+                If Sheets("recomendacao").Range("E32") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTRECOM4"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("recomendacao").Range("E34")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#RECOMENDACAO4"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("recomendacao").Range("E35")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#ACHADORECOM4"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("recomendacao").Range("E36")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#MOTIVACAORECOM4"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("recomendacao").Range("E37")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+            
+            If Sheets("prop.encaminhamento").Range("C18") = "Recomendação" Then
+                If Sheets("recomendacao").Range("E39") = "Sim" Then
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#DESTRECOM5"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("recomendacao").Range("E41")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#RECOMENDACAO5"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("recomendacao").Range("E42")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#ACHADORECOM5"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("recomendacao").Range("E43")
+                    
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Application.Selection.Find.Text = "#MOTIVACAORECOM5"
+                    .Application.Selection.Find.Execute
+                    .Application.Selection.Range = Sheets("recomendacao").Range("E44")
+                    
+                    tabela = tabela + 1
+               Else
+                    .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                    .Tables(tabela).Select
+                    .Tables(tabela).Delete
+                    .Application.Selection.Delete Unit:=wdCharacter, Count:=1
+                End If
+            End If
+End With
+
+End Sub
