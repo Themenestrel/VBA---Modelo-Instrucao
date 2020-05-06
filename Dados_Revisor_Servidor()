@@ -1,0 +1,56 @@
+Public Sub Dados_Revisor_Servidor()
+
+Set DOC = Documents(Nome_arquivo_salvo)
+'("C:\Users\it131\OneDrive\Área de Trabalho\Desenvolvimento - 2ª Versão\Anexo IX - Contrato decorrente de ARP\Modelo_Anexo IX_Contrato decorrente de ARP.docx")
+With DOC
+
+        .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+        .Application.Selection.Find.Text = "#NOMESERVIDOR"
+        .Application.Selection.Find.Execute
+        .Application.Selection.Range = Sheets("dados.cadastrais").Range("D62")
+                
+        .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+        .Application.Selection.Find.Text = "#CARGOSERVIDOR"
+        .Application.Selection.Find.Execute
+        .Application.Selection.Range = Sheets("dados.cadastrais").Range("D63")
+        
+        .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+        .Application.Selection.Find.Text = "#NUMª"
+        .Application.Selection.Find.Execute
+        .Application.Selection.Range = Sheets("dados.cadastrais").Range("D64")
+        
+        .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+        .Application.Selection.Find.Text = "#MATRICULASERVIDOR"
+        .Application.Selection.Find.Execute
+        .Application.Selection.Range = Sheets("dados.cadastrais").Range("D65")
+        
+        .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+        .Application.Selection.Find.Text = "#DATAINSTRUCAO"
+        .Application.Selection.Find.Execute
+        .Application.Selection.Range = Sheets("dados.cadastrais").Range("D67")
+        
+        .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+        .Application.Selection.Find.Text = "#NOMEREVISOR"
+        .Application.Selection.Find.Execute
+        .Application.Selection.Range = Sheets("dados.cadastrais").Range("D71")
+                
+        .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+        .Application.Selection.Find.Text = "#CARGOREVISOR"
+        .Application.Selection.Find.Execute
+        .Application.Selection.Range = Sheets("dados.cadastrais").Range("D72")
+        
+        .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+        .Application.Selection.Find.Text = "#NUMª"
+        .Application.Selection.Find.Execute
+        .Application.Selection.Range = Sheets("dados.cadastrais").Range("D64")
+        
+        .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+        .Application.Selection.Find.Text = "#MATRICULAREVISOR"
+        .Application.Selection.Find.Execute
+        .Application.Selection.Range = Sheets("dados.cadastrais").Range("D73")
+
+End With
+
+End Sub
+
+
