@@ -1,0 +1,299 @@
+Public Sub Bloco_Questoes_Conclusao()
+'            Bloco Questão 1
+
+Set DOC = Word.Documents.Application.ActiveDocument
+'("C:\Users\it131\OneDrive\Área de Trabalho\Desenvolvimento - 2ª Versão\Anexo IX - Contrato decorrente de ARP\Modelo_Anexo IX_Contrato decorrente de ARP.docx")
+With DOC
+            
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            If Sheets("formulario.analise").Range("E11") = "Não" Then
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Q1"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("F11")
+            Else
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Q1"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+            
+            If Sheets("formulario.analise").Range("E12") = "Não" Then
+                .Application.Selection.Find.Text = "#Q1.1"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("F12")
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            Else
+                .Application.Selection.Find.Text = "#Q1.1"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+            
+            If Sheets("formulario.analise").Range("E12") = "Não" Then
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Observação1.1"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("H12")
+            Else
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Observação1.1"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+            
+            If Sheets("formulario.analise").Range("E13") = "Não" Then
+                .Application.Selection.Find.Text = "#Q1.2"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("F13")
+            Else
+               .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+               .Application.Selection.Find.Text = "#Q1.2"
+               .Application.Selection.Find.Execute
+               .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+            
+            If Sheets("formulario.analise").Range("E13") = "Não" Then
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Observação1.2"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("H13")
+           Else
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Observação1.2"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+                        
+            If Sheets("formulario.analise").Range("E14") = "Não" Then
+                .Application.Selection.Find.Text = "#Q1.3"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("F14")
+            Else
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Q1.3"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+            
+            If Sheets("formulario.analise").Range("E14") = "Não" Then
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Observação1.3"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("H14")
+            Else
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+               .Application.Selection.Find.Text = "#Observação1.3"
+               .Application.Selection.Find.Execute
+               .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+            
+            If Sheets("formulario.analise").Range("E15") = "Não" Then
+                .Application.Selection.Find.Text = "#Q1.4"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("F15")
+            Else
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Q1.4"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+            
+            If Sheets("formulario.analise").Range("E15") = "Não" Then
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Observação1.4"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("H15")
+            Else
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Observação1.4"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+            
+            
+            If Sheets("formulario.analise").Range("E16") = "Não" Then
+                .Application.Selection.Find.Text = "#Q1.5"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("F16")
+            Else
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Q1.5"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+            
+            If Sheets("formulario.analise").Range("E16") = "Não" Then
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Observação1.5"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("H16")
+            Else
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Observação1.5"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+            
+            
+            If Sheets("formulario.analise").Range("E17") = "Não" Then
+                .Application.Selection.Find.Text = "#Q1.6"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("F17")
+            Else
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Q1.6"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+            
+            If Sheets("formulario.analise").Range("E17") = "Não" Then
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Observação1.6"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("H17")
+            Else
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Observação1.6"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+            
+            
+         
+'         Bloco Questão 2
+            
+            .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+            If Sheets("formulario.analise").Range("E18") = "Não" Then
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Q2"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("F18")
+            Else
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Q2"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+            
+            If Sheets("formulario.analise").Range("E19") = "Não" Then
+                .Application.Selection.Find.Text = "#Q2.1"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("F19")
+            Else
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Q2.1"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+            
+            If Sheets("formulario.analise").Range("E19") = "Não" Then
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Observação2.1"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("H19")
+            Else
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Observação2.1"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+            
+            If Sheets("formulario.analise").Range("E20") = "Não" Then
+                .Application.Selection.Find.Text = "#Q2.2"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("F20")
+            Else
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Q2.2"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+            
+            If Sheets("formulario.analise").Range("E20") = "Não" Then
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Observação2.2"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("H20")
+            Else
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Observação2.2"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+            
+            If Sheets("formulario.analise").Range("E21") = "Não" Then
+                .Application.Selection.Find.Text = "#Q2.3"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("F21")
+            Else
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Q2.3"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+            
+            If Sheets("formulario.analise").Range("E21") = "Não" Then
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Observação2.3"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("H21")
+            Else
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Observação2.3"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+            
+            If Sheets("formulario.analise").Range("E22") = "Não" Then
+                .Application.Selection.Find.Text = "#Q2.4"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("F22")
+            Else
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Q2.4"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+            
+            If Sheets("formulario.analise").Range("E22") = "Não" Then
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Observação2.4"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("H22")
+            Else
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#Observação2.4"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+            
+
+'       Bloco Conclusão
+
+        
+        If Sheets("formulario.analise").Range("I10") <> "" Then
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#CONCLUSAO_SIM"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("I10")
+            Else
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#CONCLUSAO_SIM"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+
+        If Sheets("formulario.analise").Range("J10") <> "" Then
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#CONCLUSAO_NAO"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Range = Sheets("formulario.analise").Range("J10")
+            Else
+                .Application.Selection.GoTo What:=wdGoToHeading, Which:=wdGoToFirst
+                .Application.Selection.Find.Text = "#CONCLUSAO_NAO"
+                .Application.Selection.Find.Execute
+                .Application.Selection.Delete Unit:=wdCharacter, Count:=2
+            End If
+End With
+
+End Sub
